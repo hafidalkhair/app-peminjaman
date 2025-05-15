@@ -79,7 +79,7 @@ def register():
         users[username] = {
             "password": request.form['password'],
             "email": request.form['email'],
-            "nama": "", # Data ini akan diisi di verifikasi
+            "nama": "", 
             "tempat_lahir": "",
             "kota": "",
             "provinsi": "",
@@ -87,13 +87,14 @@ def register():
             "foto": "",
             "role": "user",
             "tanggal_daftar": datetime.now().strftime("%Y-%m-%d"),
-            "total_pinjaman": 0  # Inisialisasi total_pinjaman
+            "total_pinjaman": 0  
         }
         save_json(DATA_USER, users)
         flash("Registrasi berhasil, silakan login", "success")
         return redirect(url_for('login'))
 
     return render_template('register.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -169,15 +170,14 @@ def admin_dashboard():
     total_users = len(users) - 1 if "admin" in users else len(users)
     total_peminjaman = sum(int(item['jumlah']) for item in data_peminjaman)
     
-    # Ambil 5 log aktivitas terakhir (terbaru)
     activity_logs = log_aktivitas[-5:]
-    activity_logs.reverse() # Urutkan dari terbaru ke terlama
+    activity_logs.reverse()
 
     return render_template(
         'admin-dashboard.html',
         total_users=total_users,
         total_peminjaman=total_peminjaman,
-        user_activities=activity_logs  # Ubah nama variabel agar sesuai
+        user_activities=activity_logs
     )
 
 @app.route('/admin/peminjaman')
@@ -204,7 +204,6 @@ def setujui_peminjaman(id):
             username = pinjam['username']
             jumlah_pinjaman = int(pinjam['jumlah'])
 
-            # Tambahkan total pinjaman ke user
             user = users.get(username)
             if user:
                 user['total_pinjaman'] = user.get('total_pinjaman', 0) + jumlah_pinjaman
@@ -216,7 +215,6 @@ def setujui_peminjaman(id):
     save_json(DATA_USER, users)
     return redirect(url_for('admin_peminjaman'))
 
-
 @app.route('/admin/tolak/<int:id>', methods=['POST'])
 @admin_required
 def tolak_peminjaman(id):
@@ -227,7 +225,6 @@ def tolak_peminjaman(id):
     save_json(DATA_PINJAMAN, data_peminjaman)
     return redirect(url_for('admin_peminjaman'))
 
-# UBAH STATUS PEMINJAMAN MASAL
 @app.route('/admin/peminjaman/ubah_status_massal', methods=['POST'])
 @admin_required
 def ubah_status_peminjaman_massal():
@@ -235,7 +232,7 @@ def ubah_status_peminjaman_massal():
     users = load_json(DATA_USER, {})
 
     for pinjam in data_peminjaman:
-        id_pinjam = str(pinjam['id'])  # Pastikan ID adalah string
+        id_pinjam = str(pinjam['id'])
         status_baru = request.form.get(f'status_{id_pinjam}')
 
         if status_baru and pinjam['status'] != status_baru:
@@ -245,7 +242,6 @@ def ubah_status_peminjaman_massal():
             jumlah_pinjaman = int(pinjam['jumlah'])
 
             if pinjam['status'] == 'Selesai' and status_lama != 'Selesai':
-                # Kurangi total pinjaman user
                 user = users.get(username)
                 if user:
                     user['total_pinjaman'] = user.get('total_pinjaman', 0) - jumlah_pinjaman
@@ -267,7 +263,6 @@ def form_peminjaman():
     users = load_json(DATA_USER, {})
     user = users.get(session['username'])
 
-    # Validasi biodata lengkap
     if not all([user.get("nama"), user.get("tempat_lahir"), user.get("kota"),
                 user.get("provinsi"), user.get("jenis_kelamin"), user.get("foto")]):
         flash("Lengkapi biodata dan upload foto sebelum mengajukan pinjaman!", "error")
@@ -275,7 +270,6 @@ def form_peminjaman():
 
     if request.method == 'POST':
         data = load_json(DATA_PINJAMAN, [])
-        users = load_json(DATA_USER, {})
         username = session['username']
         jumlah_pinjaman = int(request.form.get('jumlah'))
 
@@ -289,16 +283,8 @@ def form_peminjaman():
         }
         data.append(peminjaman)
 
-        # Update total pinjaman di data user (sementara)
-        user = users.get(username)
-        if user:
-            # user['total_pinjaman'] = user.get('total_pinjaman', 0) + jumlah_pinjaman
-            flash("Peminjaman berhasil diajukan. Menunggu persetujuan Admin.", "success")
-        else:
-            flash(f"User {username} tidak ditemukan.", "error")
-
+        flash("Peminjaman berhasil diajukan. Menunggu persetujuan Admin.", "success")
         save_json(DATA_PINJAMAN, data)
-        #save_json(DATA_USER, users) # Jangan simpan di sini, simpan saat disetujui
         log_activity(session['username'], "Ajukan Peminjaman")
         return redirect(url_for('user_dashboard'))
 
@@ -333,7 +319,7 @@ def logout():
     session.clear()
     return redirect(url_for('landing'))
 
-#LAPORAN PEMINJAMAN
+# LAPORAN PEMINJAMAN
 @app.route('/admin/laporan', methods=['GET', 'POST'])
 @admin_required
 def laporan_peminjaman():
@@ -341,20 +327,16 @@ def laporan_peminjaman():
         tgl_awal = request.form['tgl_awal']
         tgl_akhir = request.form['tgl_akhir']
 
-        # Load data peminjaman dan user
         data_pinjaman = load_json(DATA_PINJAMAN, [])
         data_user = load_json(DATA_USER, {})
 
-        # Filter data peminjaman berdasarkan tanggal
         data_laporan = [
             p for p in data_pinjaman
             if tgl_awal <= p['tanggal_pinjam'] <= tgl_akhir
         ]
 
-        # Hitung total peminjaman
         total_peminjaman = sum(int(p['jumlah']) for p in data_laporan)
 
-        # Tambahkan nama peminjam ke data laporan
         for p in data_laporan:
             username = p['username']
             p['nama_peminjam'] = data_user.get(username, {}).get('nama', 'Tidak Diketahui')
@@ -368,6 +350,26 @@ def laporan_peminjaman():
         )
 
     return render_template('admin/form-laporan.html')
+
+@app.route('/admin/laporan/cetak', methods=['GET'])
+@admin_required
+def cetak_laporan():
+    tgl_awal = request.args.get('tgl_awal')
+    tgl_akhir = request.args.get('tgl_akhir')
+
+    data_pinjaman = load_json(DATA_PINJAMAN, [])
+    data_user = load_json(DATA_USER, {})
+
+    data_laporan = [
+        p for p in data_pinjaman
+        if tgl_awal <= p['tanggal_pinjam'] <= tgl_akhir
+    ]
+
+    for p in data_laporan:
+        username = p['username']
+        p['nama_peminjam'] = data_user.get(username, {}).get('nama', 'Tidak Diketahui')
+
+    return render_template('cetak-laporan.html', data_laporan=data_laporan, tgl_awal=tgl_awal, tgl_akhir=tgl_akhir)
 
 if __name__ == '__main__':
     os.makedirs('data', exist_ok=True)
