@@ -44,9 +44,9 @@
             <p>Tidak ada data peminjaman pada periode ini.</p>
             {% endif %}
 
-            <button onclick="window.print()" class="btn btn-secondary">
+            <a href="{{ url_for('cetak_laporan', tgl_awal=tgl_awal, tgl_akhir=tgl_akhir) }}" target="_blank" class="btn btn-secondary">
                 <i class="fas fa-print"></i> Cetak Laporan
-            </button>
+            </a>
         </div>
     </div>
 </div>
