@@ -22,5 +22,21 @@
     "tanggal_pinjam": "2025-05-04",
     "tanggal_kembali": "2025-05-10",
     "status": "Menunggu"
+  },
+  {
+    "id": 4,
+    "username": "hafid",
+    "jumlah": "60",
+    "tanggal_pinjam": "2025-05-15",
+    "tanggal_kembali": "2025-05-23",
+    "status": "Menunggu"
+  },
+  {
+    "id": 5,
+    "username": "zikri",
+    "jumlah": "200000",
+    "tanggal_pinjam": "2025-05-16",
+    "tanggal_kembali": "2025-05-17",
+    "status": "Disetujui"
   }
 ]

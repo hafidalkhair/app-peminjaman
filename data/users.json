@@ -62,5 +62,18 @@
     "role": "user",
     "tanggal_daftar": "2025-05-05",
     "total_pinjaman": 0
+  },
+  "zikri": {
+    "password": "1",
+    "email": "zikri@gmail.com",
+    "nama": "gam",
+    "tempat_lahir": "ranto",
+    "kota": "medan",
+    "provinsi": "sumut",
+    "jenis_kelamin": "Laki-laki",
+    "foto": "zikri_1000068684.jpg",
+    "role": "user",
+    "tanggal_daftar": "2025-05-16",
+    "total_pinjaman": 0
   }
 }

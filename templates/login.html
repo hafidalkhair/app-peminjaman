@@ -3,23 +3,175 @@
 {% block title %}Login - Aplikasi Peminjaman{% endblock %}
 
 {% block content %}
-<div class="form-container">
-    <h3 class="text-center mb-4">Login Aplikasi</h3>
-    <form method="POST">
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" name="username" class="form-control" id="username" required autofocus>
+<style>
+    body {
+        background: url('https://th.bing.com/th/id/R.7f51759d31d74d2f921542d16f1c0c79?rik=rMPU8miNfzhCjA&riu=http%3a%2f%2fciungtips.com%2fwp-content%2fuploads%2f2017%2f09%2fPinjaman-Uang.jpg&ehk=IVNBvqhkC%2beqsS9%2fmFcLfvxU4Qa5sjC3YaIw3lkTA1s%3d&risl=&pid=ImgRaw&r=0');
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 600px; /* Ukuran bingkai */
+        display: flex;
+        border-radius: 100px; /* Ubah menjadi border-radius */
+        overflow: hidden;
+        border: none; /* Pastikan tidak ada border */
+    }
+
+    .login-image {
+        background: rgba(255, 255, 255, 0.8); /* Background semi-transparan */
+        width: 40%; /* Lebar gambar */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Padding */
+        color: white;
+        position: relative;
+    }
+
+    .login-image h2 {
+        font-size: 2rem; /* Ukuran font */
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #007bff; /* Ubah warna teks menjadi biru */
+    }
+
+    .login-image p {
+        font-size: 1rem; /* Ukuran font */
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .login-form {
+        background-color: #ffffff;
+        padding: 30px 20px; /* Padding */
+        width: 60%; /* Lebar form */
+    }
+
+    .login-card h3 {
+        font-weight: 700;
+        font-size: 1.8rem; /* Ukuran font */
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    .login-subtitle {
+        color: #777;
+        margin-bottom: 40px; /* Margin */
+        font-size: 0.9rem; /* Ukuran font */
+    }
+
+    @media (max-width: 992px) {
+        .login-container {
+            flex-direction: column;
+            max-width: 90%; /* Ukuran bingkai untuk layar kecil */
+        }
+        
+        .login-image,
+        .login-form {
+            width: 100%;
+        }
+        
+        .login-image {
+            padding: 100px;
+        }
+    }
+</style>
+
+<div class="login-container">
+    <div class="login-image">
+        <h2>Pinjam Dulu Seratus</h2>
+    </div>
+    
+    <div class="login-form">
+        <div class="login-card">
+            <h3>Selamat Datang</h3>
+            <p class="login-subtitle">Silakan masuk untuk melanjutkan ke aplikasi</p>
+            
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            
+            <form method="POST">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" id="username" placeholder=" " required autofocus>
+                    <label for="username" class="form-label">Username</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="password" placeholder=" " required>
+                    <label for="password" class="form-label">Password</label>
+                    <span class="password-toggle" onclick="togglePassword()">
+                        <i id="toggleIcon" class="fas fa-eye"></i>
+                    </span>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Ingat saya</label>
+                    </div>
+                    <a href="#" class="forgot-password">Lupa password?</a>
+                </div>
+                
+                <div class="d-grid mb-4">
+                    <button type="submit" class="btn btn-primary">Masuk</button>
+                </div>
+                
+                <div class="divider">
+                  
+                </div>
+                
+                <div class="text-center">
+                    <p class="mb-3">Belum punya akun?</p>
+                    <a href="{{ url_for('register') }}" class="btn btn-register">Daftar Akun Baru</a>
+                </div>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" id="password" required>
-        </div>
-        <div class="d-grid mb-2">
-            <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-        <div class="text-center">
-            <a href="{{ url_for('register') }}" class="btn btn-success btn-sm">Daftar akun baru</a>
-        </div>
-    </form>
+    </div>
 </div>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.getElementById('toggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('.form-control');
+        
+        inputs.forEach(input => {
+            if (input.value !== '') {
+                input.classList.add('has-value');
+            }
+            
+            input.addEventListener('input', function() {
+                if (this.value !== '') {
+                    this.classList.add('has-value');
+                } else {
+                    this.classList.remove('has-value');
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}

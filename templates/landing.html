@@ -1,140 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Datang | Web Peminjaman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://th.bing.com/th/id/R.7f51759d31d74d2f921542d16f1c0c79?rik=rMPU8miNfzhCjA&riu=http%3a%2f%2fciungtips.com%2fwp-content%2fuploads%2f2017%2f09%2fPinjaman-Uang.jpg&ehk=IVNBvqhkC%2beqsS9%2fmFcLfvxU4Qa5sjC3YaIw3lkTA1s%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             min-height: 100vh;
             margin: 0;
             padding: 0;
         }
 
-        .landing-container {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
+        .navbar {
+            background-color: #007bff !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            font-size: 3.5rem;
+        .navbar-brand {
+            color: #fff !important;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .nav-buttons .btn-primary {
+            background-color: #fff;
+            color: #007bff;
+            border: 2px solid #fff;
+        }
+
+        .nav-buttons .btn-secondary {
+            background-color: #0056b3;
+            color: #fff;
+            border: 2px solid #0056b3;
+        }
+
+        .nav-buttons .btn:hover {
+            opacity: 0.9;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .landing-container {
+            background-color: #ffffffee;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .landing-container h1 {
+            font-size: 2.5rem;
             font-weight: 700;
             color: #007bff;
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 1.25rem;
-            color: #6c757d;
+        .landing-container .subtitle {
+            font-size: 1.1rem;
+            color: #333;
             margin-bottom: 30px;
         }
 
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            padding: 12px 30px;
-            font-size: 1.1rem;
+        .feature-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .feature-title {
             font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background-color: #6c757d;
-            border-color: #6c757d;
-            padding: 12px 30px;
             font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .btn-action {
+            margin-top: 20px;
+            padding: 10px 25px;
+            border-radius: 50px;
             font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
 
-        .btn-secondary:hover {
-            background-color: #545b62;
-            border-color: #545b62;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .landing-container {
-                padding: 30px;
-            }
-
-            h1 {
-                font-size: 2.8rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-
-            .btn {
-                padding: 10px 24px;
-                font-size: 1rem;
-            }
+        .footer {
+            background-color: #ffffffcc;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #555;
         }
 
         @media (max-width: 576px) {
-            .landing-container {
-                padding: 20px;
+            .landing-container h1 {
+                font-size: 2rem;
             }
 
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            p {
+            .landing-container .subtitle {
                 font-size: 1rem;
-            }
-
-            .btn {
-                padding: 8px 20px;
-                font-size: 0.9rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="landing-container">
-        <h1>Pinjam Dulu Seratus</h1>
-        <p>Agar Silaturahmi Tidak Putus Kawan.</p>
-        <a href="{{ url_for('login') }}" class="btn btn-primary">
-            <i class="fas fa-sign-in-alt me-2"></i>
-            Login
-        </a>
-        <a href="{{ url_for('register') }}" class="btn btn-secondary">
-            <i class="fas fa-user-plus me-2"></i>
-            Daftar
-        </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pinjam Dulu Seratus</a>
+            <div class="ms-auto nav-buttons d-none d-lg-flex">
+                <a href="{{ url_for('login') }}" class="btn btn-primary me-2">
+                    <i class="fas fa-sign-in-alt me-1"></i> Login
+                </a>
+                <a href="{{ url_for('register') }}" class="btn btn-secondary">
+                    <i class="fas fa-user-plus me-1"></i> Daftar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Content -->
+    <div class="overlay">
+        <div class="landing-container">
+            <h1>Pinjam Dulu Seratus</h1>
+            <p class="subtitle">Agar Silaturahmi Tidak Terputus</p>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                <div class="feature-title">Cepat & Mudah</div>
+                <div class="feature-text">Proses peminjaman yang praktis tanpa syarat ribet.</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="feature-title">Aman & Terpercaya</div>
+                <div class="feature-text">Transaksi aman dengan sistem yang teruji.</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <div class="feature-title">Bunga Rendah</div>
+                <div class="feature-text">Pinjaman ringan, sesuai kebutuhan.</div>
+            </div>
+
+            <a href="#" class="btn btn-outline-primary btn-action">
+                <i class="fas fa-info-circle me-2"></i> Pelajari Lebih Lanjut
+            </a>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Web Peminjaman. Semua Hak Dilindungi.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
