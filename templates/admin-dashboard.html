@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+{% block content_title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Selamat Datang di Dashboard Admin!</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total User Terdaftar</h5>
+                    <p class="card-text">{{ total_users }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Peminjaman</h5>
+                    <p class="card-text">{{ total_peminjaman | rupiah }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aktivitas User Terbaru</h5>
+                    <ul>
+                        {% for activity in user_activities %}
+                            <li>{{ activity.username }} - {{ activity.aksi }} ({{ activity.waktu }})</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

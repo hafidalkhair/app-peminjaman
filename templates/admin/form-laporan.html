@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+{% block content_title %}Form Laporan Peminjaman{% endblock %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    Pilih Periode Laporan
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{{ url_for('laporan_peminjaman') }}">
+                        <div class="mb-3">
+                            <label for="tgl_awal" class="form-label">Tanggal Awal:</label>
+                            <input type="date" class="form-control" id="tgl_awal" name="tgl_awal" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tgl_akhir" class="form-label">Tanggal Akhir:</label>
+                            <input type="date" class="form-control" id="tgl_akhir" name="tgl_akhir" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Generate Laporan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

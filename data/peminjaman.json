@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "hafid",
+    "jumlah": "1000000",
+    "tanggal_pinjam": "2025-05-17",
+    "tanggal_kembali": "2025-06-28",
+    "status": "Disetujui"
+  },
+  {
+    "id": 2,
+    "username": "hafid",
+    "jumlah": "120000",
+    "tanggal_pinjam": "2025-05-03",
+    "tanggal_kembali": "2025-05-31",
+    "status": "Disetujui"
+  },
+  {
+    "id": 3,
+    "username": "hafid",
+    "jumlah": "900000",
+    "tanggal_pinjam": "2025-05-04",
+    "tanggal_kembali": "2025-05-10",
+    "status": "Menunggu"
+  }
+]

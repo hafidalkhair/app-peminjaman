@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Admin Users{% endblock %}
+{% block content_title %}Users{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Daftar User</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Nama Lengkap</th>
+                <th>Tempat Lahir</th>
+                <th>Kota</th>
+                <th>Provinsi</th>
+                <th>Jenis Kelamin</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for uname, u in users.items() %}
+            <tr>
+              <td>
+                {% if u.foto %}
+                  <img src="{{ url_for('static', filename='uploads/' ~ u.foto) }}" width="60">
+                {% else %}
+                  <span class="badge bg-warning">Belum Ada</span>
+                {% endif %}
+              </td>
+              <td>{{ uname }}</td>
+              <td>{{ u.email }}</td>
+              <td>{{ u.nama }}</td>
+              <td>{{ u.tempat_lahir }}</td>
+              <td>{{ u.kota }}</td>
+              <td>{{ u.provinsi }}</td>
+              <td>{{ u.jenis_kelamin }}</td>
+              <td>{{ u.role }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

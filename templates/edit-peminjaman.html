@@ -1,0 +1,25 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+  <h2>Edit Peminjaman</h2>
+
+  <form method="POST">
+    Username:<br>
+    <input type="text" name="username" value="{{ data.username }}" required><br><br>
+    Jumlah (Rp):<br>
+    <input type="number" name="jumlah" value="{{ data.jumlah }}" required><br><br>
+    Tanggal Pinjam:<br>
+    <input type="date" name="tanggal_pinjam" value="{{ data.tanggal_pinjam }}" required><br><br>
+    Tanggal Kembali:<br>
+    <input type="date" name="tanggal_kembali" value="{{ data.tanggal_kembali }}" required><br><br>
+    Status:<br>
+    <select name="status">
+      <option value="menunggu" {% if data.status == 'menunggu' %}selected{% endif %}>Menunggu</option>
+      <option value="disetujui" {% if data.status == 'disetujui' %}selected{% endif %}>Disetujui</option>
+      <option value="ditolak" {% if data.status == 'ditolak' %}selected{% endif %}>Ditolak</option>
+    </select><br><br>
+    <button type="submit">Simpan</button>
+  </form>
+<div style="display: flex; justify-content: center;">
+    <a href="{{ url_for('user_dashboard') }}" class="btn">Kembali</a>
+</div>
+  {% endblock %}

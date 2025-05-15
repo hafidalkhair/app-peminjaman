@@ -1,0 +1,80 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+<div class="container">
+    <h2 class="text-center mb-4">Lengkapi Biodata & Upload Foto</h2>
+    <p class="text-center">Anda harus melengkapi biodata dan mengunggah foto sebelum dapat mengakses dashboard.</p>
+
+    <h4 class="mt-4">Status Biodata</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nama</td>
+                    <td>{{ '✅' if profile.nama else '❌' }}</td>
+                </tr>
+                <tr>
+                    <td>Tempat Lahir</td>
+                    <td>{{ '✅' if profile.tempat_lahir else '❌' }}</td>
+                </tr>
+                <tr>
+                    <td>Kabupaten/Kota</td>
+                    <td>{{ '✅' if profile.kota else '❌' }}</td>
+                </tr>
+                <tr>
+                    <td>Provinsi</td>
+                    <td>{{ '✅' if profile.provinsi else '❌' }}</td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>{{ '✅' if profile.jenis_kelamin else '❌' }}</td>
+                </tr>
+                <tr>
+                    <td>Foto Profil</td>
+                    <td>
+                        {% if profile.foto %}
+                        ✅ <br><img src="{{ url_for('static', filename='uploads/' + profile.foto) }}" width="100"
+                            class="img-thumbnail">
+                        {% else %}
+                        ❌
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <a href="{{ url_for('edit_profile') }}" class="btn btn-primary">
+            <i class="fas fa-edit me-2"></i>
+            Edit Biodata
+        </a>
+    </div>
+
+    <hr class="my-4">
+
+    <h4 class="mt-4">Upload Foto Profil</h4>
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_foto') }}">
+        <div class="mb-3">
+            <label for="foto" class="form-label">Pilih File Foto</label>
+            <input class="form-control" type="file" name="foto" id="foto" accept="image/*" required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-upload me-2"></i>
+                Upload
+            </button>
+            <a href="{{ url_for('user_dashboard') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left me-2"></i>
+                Kembali
+            </a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

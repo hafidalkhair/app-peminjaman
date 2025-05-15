@@ -1,0 +1,183 @@
+/* Reset dan font dasar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+}
+
+/* Container utama */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1, h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Formulir */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+form input, form select, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+table th {
+  background-color: #f5f5f5;
+}
+
+/* Alert */
+.alert {
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 15px;
+  background-color: #2ecc71;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-dashboard {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 15px;
+  background-color: #2e85cc;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+
+  table th, table td {
+      font-size: 0.9rem;
+  }
+
+  form input, form select, form button {
+      font-size: 0.9rem;
+  }
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08); /* Efek shadow tipis */
+  background-color: #f8f9fa; /* Warna latar belakang sidebar */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #495057; /* Warna teks menu */
+  padding: 0.75rem 1rem; /* Padding menu */
+}
+
+.sidebar .nav-link i {
+  margin-right: 0.5rem; /* Jarak ikon dan teks */
+  color: #6c757d; /* Warna ikon */
+}
+
+.sidebar .nav-link.active {
+  color: #007bff; /* Warna teks menu aktif */
+  background-color: rgba(0, 123, 255, 0.1); /* Latar belakang menu aktif */
+}
+
+.sidebar .nav-link:hover {
+  color: #007bff; /* Warna teks menu saat dihover */
+  background-color: rgba(0, 123, 255, 0.05); /* Latar belakang menu saat dihover */
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6c757d; /* Warna teks heading */
+}
+
+/* Main Content */
+main {
+  padding-top: 20px; /* Sesuaikan dengan tinggi navbar */
+  background-color: #fff; /* Warna latar belakang main content */
+}
+
+/* Tambahan untuk border-bottom */
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}

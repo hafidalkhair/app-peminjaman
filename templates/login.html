@@ -1,0 +1,25 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}Login - Aplikasi Peminjaman{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h3 class="text-center mb-4">Login Aplikasi</h3>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" required autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" required>
+        </div>
+        <div class="d-grid mb-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div class="text-center">
+            <a href="{{ url_for('register') }}" class="btn btn-success btn-sm">Daftar akun baru</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

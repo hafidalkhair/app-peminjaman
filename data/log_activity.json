@@ -1,0 +1,602 @@
+[
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 02:59:53"
+  },
+  {
+    "username": "ma5ymbl2p@mozmail.com",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:00:58"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:01:32"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:03:49"
+  },
+  {
+    "username": "ma5ymbl2p@mozmail.com",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:03:53"
+  },
+  {
+    "username": "ma5ymbl2p@mozmail.com",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 03:09:26"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:09:55"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:10:15"
+  },
+  {
+    "username": "budiman",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:12:09"
+  },
+  {
+    "username": "budiman",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:12:24"
+  },
+  {
+    "username": "budiman",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:12:29"
+  },
+  {
+    "username": "budiman",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:12:47"
+  },
+  {
+    "username": "tutu",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:14:05"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:22:46"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:35:38"
+  },
+  {
+    "username": "ma5ymbl2p@mozmail.com",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:47:59"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:48:08"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:50:10"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:52:05"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:54:44"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:55:32"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:55:37"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:55:51"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:56:04"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 03:56:08"
+  },
+  {
+    "username": "Joel",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:57:27"
+  },
+  {
+    "username": "Joel",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 03:58:02"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 03:58:13"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:28:37"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 12:28:48"
+  },
+  {
+    "username": "Joel",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:29:05"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:30:38"
+  },
+  {
+    "username": "Joel",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:30:58"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:34:03"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:47:04"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 12:47:21"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:47:27"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 12:47:42"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:47:49"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 12:48:08"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 12:48:15"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:13:39"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:23:00"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 13:41:31"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:41:36"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:41:46"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:52:32"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 13:54:19"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:02:45"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:04:50"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 14:05:14"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:05:24"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:23:14"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:24:18"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 14:50:18"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 17:00:49"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 17:46:35"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 18:30:54"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 18:31:29"
+  },
+  {
+    "username": "fidd",
+    "aksi": "Login",
+    "waktu": "2025-05-03 18:32:19"
+  },
+  {
+    "username": "fidd",
+    "aksi": "Logout",
+    "waktu": "2025-05-03 18:33:55"
+  },
+  {
+    "username": "fidd",
+    "aksi": "Login",
+    "waktu": "2025-05-03 18:34:00"
+  },
+  {
+    "username": "fidd",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 18:59:28"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:16:14"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:18:39"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:19:24"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:19:29"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:19:34"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:19:48"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "2025-05-03 19:20:13"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "2025-05-03 19:20:20"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 19:39:15"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 19:40:03"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 19:40:14"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "03-05-2025 19:40:18"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 20:04:09"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "03-05-2025 20:04:17"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 20:45:22"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 20:47:01"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 20:51:10"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 20:51:16"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 20:52:36"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 20:52:40"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 20:53:02"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 20:55:31"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 20:59:31"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 23:46:11"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "03-05-2025 23:49:42"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 23:51:24"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "03-05-2025 23:51:31"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 23:51:41"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "03-05-2025 23:52:11"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "03-05-2025 23:53:39"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:03:45"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 00:04:18"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:08:50"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 00:10:02"
+  },
+  {
+    "username": "fuad",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:20:01"
+  },
+  {
+    "username": "fuad",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 00:29:39"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:29:56"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:56:04"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 00:56:47"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:58:24"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 00:58:32"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 01:07:33"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 01:07:37"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "04-05-2025 01:12:04"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 01:16:31"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 01:16:36"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "04-05-2025 01:17:49"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 01:18:00"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "04-05-2025 01:22:45"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Login",
+    "waktu": "04-05-2025 16:40:37"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Ajukan Peminjaman",
+    "waktu": "04-05-2025 16:41:02"
+  },
+  {
+    "username": "hafid",
+    "aksi": "Logout",
+    "waktu": "04-05-2025 16:42:19"
+  },
+  {
+    "username": "ajra",
+    "aksi": "Login",
+    "waktu": "05-05-2025 14:15:06"
+  },
+  {
+    "username": "nisa",
+    "aksi": "Login",
+    "waktu": "05-05-2025 14:20:03"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "08-05-2025 19:52:44"
+  },
+  {
+    "username": "admin",
+    "aksi": "Logout",
+    "waktu": "08-05-2025 20:02:36"
+  },
+  {
+    "username": "admin",
+    "aksi": "Login",
+    "waktu": "08-05-2025 20:02:47"
+  }
+]

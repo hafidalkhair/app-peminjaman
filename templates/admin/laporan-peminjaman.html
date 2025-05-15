@@ -1,0 +1,54 @@
+{% extends "layouts/base.html" %}
+{% block content_title %}Laporan Peminjaman{% endblock %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            Laporan Peminjaman
+        </div>
+        <div class="card-body">
+            <p>Periode: {{ tgl_awal|tanggal_format }} - {{ tgl_akhir|tanggal_format }}</p>
+            <p>Total Peminjaman: {{ total_peminjaman|rupiah }}</p>
+
+            {% if data_laporan %}
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Nama Peminjam</th>
+                            <th>Jumlah</th>
+                            <th>Tgl Pinjam</th>
+                            <th>Tgl Kembali</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for pinjaman in data_laporan %}
+                        <tr>
+                            <td>{{ pinjaman.id }}</td>
+                            <td>{{ pinjaman.username }}</td>
+                            <td>{{ pinjaman.nama_peminjam }}</td>
+                            <td>{{ pinjaman.jumlah|rupiah }}</td>
+                            <td>{{ pinjaman.tanggal_pinjam|tanggal_format }}</td>
+                            <td>{{ pinjaman.tanggal_kembali|tanggal_format }}</td>
+                            <td>{{ pinjaman.status }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p>Tidak ada data peminjaman pada periode ini.</p>
+            {% endif %}
+
+            <button onclick="window.print()" class="btn btn-secondary">
+                <i class="fas fa-print"></i> Cetak Laporan
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

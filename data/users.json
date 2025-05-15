@@ -1,0 +1,66 @@
+{
+  "admin": {
+    "password": "admin123",
+    "email": "admin@example.com",
+    "nama": "Admin",
+    "tempat_lahir": "",
+    "kota": "",
+    "provinsi": "",
+    "jenis_kelamin": "",
+    "foto": "",
+    "role": "admin",
+    "tanggal_daftar": "2025-05-03"
+  },
+  "hafid": {
+    "password": "1",
+    "email": "fid@gmail.com",
+    "nama": "Hafid",
+    "tempat_lahir": "Palak Hilir",
+    "kota": "Aceh Barat Daya",
+    "provinsi": "Aceh",
+    "jenis_kelamin": "Laki-laki",
+    "foto": "hafid_foto.jpeg",
+    "role": "user",
+    "tanggal_daftar": "2025-05-03",
+    "total_pinjaman": -1110000
+  },
+  "fuad": {
+    "password": "1",
+    "email": "fuad@gmail.com",
+    "nama": "Fuad Tap",
+    "tempat_lahir": "Manchester",
+    "kota": "United",
+    "provinsi": "English",
+    "jenis_kelamin": "Laki-laki",
+    "foto": "fuad_boh.jpeg",
+    "role": "user",
+    "tanggal_daftar": "2025-05-04",
+    "total_pinjaman": 0
+  },
+  "ajra": {
+    "password": "1",
+    "email": "ajra@gmail.com",
+    "nama": "Ajra",
+    "tempat_lahir": "Kuta Blang ",
+    "kota": "Aceh Barat Daya",
+    "provinsi": "Aceh",
+    "jenis_kelamin": "Laki-laki",
+    "foto": "ajra_foto1.jpeg",
+    "role": "user",
+    "tanggal_daftar": "2025-05-05",
+    "total_pinjaman": 0
+  },
+  "nisa": {
+    "password": "annisa",
+    "email": "nisa@gmail.com",
+    "nama": "",
+    "tempat_lahir": "",
+    "kota": "",
+    "provinsi": "",
+    "jenis_kelamin": "",
+    "foto": "",
+    "role": "user",
+    "tanggal_daftar": "2025-05-05",
+    "total_pinjaman": 0
+  }
+}

@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+#sidebar {
+    background-color: #007bff;
+    position: fixed; /* Make sidebar fixed */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Enable scrolling if needed */
+}
+.nav-link {
+    color: #ffffff;
+}
+.nav-link:hover {
+    background-color: #0056b3;
+}
+.active {
+    background-color: #0056b3;
+}
+.main-content {
+    margin-left: 250px; /* Adjust margin to fit sidebar */
+    padding: 20px; /* Add padding for better spacing */
+}
+.card {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    background-color: #007bff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.form-control {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+}
+.btn-primary:hover {
+    background-color: #218838;
+}
+@media (max-width: 768px) {
+    #sidebar {
+        position: static; /* Reset for smaller screens */
+        height: auto; /* Reset height */
+    }
+    .main-content {
+        margin-left: 0; /* Reset margin on smaller screens */
+    }
+}

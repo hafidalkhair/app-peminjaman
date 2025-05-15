@@ -1,0 +1,49 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+<div class="container">
+  <h2>Edit Profil Pengguna</h2>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="nama" class="form-label">Nama Lengkap:</label>
+      <input type="text" class="form-control" id="nama" name="nama" value="{{ profile.nama }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="tempat_lahir" class="form-label">Tempat Lahir:</label>
+      <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ profile.tempat_lahir }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="kota" class="form-label">Kabupaten/Kota:</label>
+      <input type="text" class="form-control" id="kota" name="kota" value="{{ profile.kota }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="provinsi" class="form-label">Provinsi:</label>
+      <input type="text" class="form-control" id="provinsi" name="provinsi" value="{{ profile.provinsi }}" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="jenis_kelamin" class="form-label">Jenis Kelamin:</label>
+      <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+        <option value="">-- Pilih Jenis Kelamin --</option>
+        <option value="Laki-laki" {% if profile.jenis_kelamin == 'Laki-laki' %}selected{% endif %}>Laki-laki</option>
+        <option value="Perempuan" {% if profile.jenis_kelamin == 'Perempuan' %}selected{% endif %}>Perempuan</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password Baru:</label>
+      <input type="password" class="form-control" id="password" name="password" value="{{ profile.password }}" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+  </form>
+  <div style="display: flex; justify-content: center;">
+    <a href="{{ url_for('user_dashboard') }}" class="btn">Kembali</a>
+</div>
+</div>
+
+{% endblock %}
